@@ -1,0 +1,1504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karting Retreat — 5 Brand Concepts</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:ital,wght@0,200;0,300;0,400;0,700;0,800;1,300;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Serif+Display:ital@0;1&family=Josefin+Sans:wght@100;200;300;400;700&family=Syne:wght@400;700;800&family=Fraunces:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: #080808;
+  color: #F2EDE6;
+  font-family: 'Barlow Condensed', sans-serif;
+  overflow-x: hidden;
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideRight {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ══════════════════════════════
+   HERO
+══════════════════════════════ */
+.hero {
+  min-height: 100vh;
+  background: #080808;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg-text {
+  position: absolute;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(120px, 22vw, 280px);
+  color: rgba(242,237,230,0.025);
+  letter-spacing: -4px;
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 18px;
+  border: 1px solid rgba(242,237,230,0.15);
+  border-radius: 100px;
+  font-size: 10px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: rgba(242,237,230,0.4);
+  margin-bottom: 40px;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards 0.2s;
+}
+
+.hero-pill span {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: #E8C547;
+  display: inline-block;
+}
+
+.hero-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(68px, 12vw, 150px);
+  line-height: 0.88;
+  letter-spacing: 1px;
+  color: #F2EDE6;
+  margin-bottom: 28px;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards 0.35s;
+}
+
+.hero-title .accent { color: #E8C547; }
+
+.hero-sub {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: rgba(242,237,230,0.4);
+  max-width: 480px;
+  line-height: 1.6;
+  margin-bottom: 60px;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards 0.5s;
+}
+
+.hero-concepts-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards 0.65s;
+}
+
+.hero-chip {
+  padding: 10px 20px;
+  border: 1px solid rgba(242,237,230,0.1);
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(242,237,230,0.35);
+  transition: all 0.3s;
+  cursor: default;
+}
+.hero-chip:hover {
+  border-color: #E8C547;
+  color: #E8C547;
+}
+
+/* ══════════════════════════════
+   SHARED DIVIDER
+══════════════════════════════ */
+.divider {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 20px;
+  padding: 80px 56px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.divider-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 13px;
+  letter-spacing: 4px;
+  color: rgba(242,237,230,0.2);
+}
+
+.divider-line {
+  height: 1px;
+  background: rgba(242,237,230,0.07);
+}
+
+.divider-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 13px;
+  letter-spacing: 4px;
+  color: rgba(242,237,230,0.2);
+}
+
+/* ══════════════════════════════
+   CONCEPT 1 — AURELIAN RETREATS
+   World: Champagne, cream, warm gold, deep espresso
+   Vibe: editorial magazine, Vogue Italia, grown-up luxury
+══════════════════════════════ */
+.c1 {
+  max-width: 1200px;
+  margin: 0 auto 0;
+  padding: 0 56px;
+}
+
+.c1-main {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  min-height: 600px;
+}
+
+.c1-left {
+  background: #F5EFE3;
+  color: #1A1208;
+  padding: 72px 64px;
+  position: relative;
+  overflow: hidden;
+}
+
+.c1-left::before {
+  content: 'A';
+  position: absolute;
+  bottom: -60px; right: -20px;
+  font-family: 'Fraunces', serif;
+  font-size: 360px;
+  color: rgba(26,18,8,0.05);
+  line-height: 1;
+  pointer-events: none;
+}
+
+.concept-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.badge-num {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+/* c1 colors */
+.c1-badge { color: rgba(26,18,8,0.35); }
+.c1-badge .badge-num { border: 1px solid rgba(26,18,8,0.25); color: #1A1208; }
+
+.c1-wordmark {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(48px, 5.5vw, 76px);
+  font-weight: 300;
+  line-height: 0.95;
+  color: #1A1208;
+  margin-bottom: 8px;
+}
+
+.c1-wordmark em {
+  font-style: italic;
+  color: #A07830;
+}
+
+.c1-sub {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 9px;
+  font-weight: 300;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  color: rgba(26,18,8,0.32);
+  margin-bottom: 44px;
+}
+
+.c1-tagline {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.45;
+  color: #2E2010;
+  border-left: 3px solid #C4963A;
+  padding-left: 20px;
+  margin-bottom: 40px;
+}
+
+.c1-story {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.75;
+  color: rgba(26,18,8,0.48);
+  max-width: 400px;
+}
+
+.c1-story strong { color: #1A1208; font-weight: 400; }
+
+.c1-right {
+  background: #1A1208;
+  padding: 72px 52px;
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+}
+
+/* shared right-panel blocks */
+.panel-label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: rgba(242,237,230,0.22);
+  margin-bottom: 14px;
+}
+
+.swatch-row {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.sw { flex: 1; height: 42px; border-radius: 4px; }
+
+.sw-labels {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 0;
+}
+
+.sw-label {
+  flex: 1;
+  font-size: 8px;
+  letter-spacing: 1px;
+  color: rgba(242,237,230,0.18);
+  text-align: center;
+  padding-top: 4px;
+}
+
+.kw-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.kw {
+  padding: 8px 14px;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+
+.type-block-name {
+  font-size: 26px;
+  margin-bottom: 4px;
+}
+
+.type-block-sub {
+  font-size: 9px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: rgba(242,237,230,0.2);
+}
+
+/* c1 specifics */
+.c1-kw { border: 1px solid rgba(196,150,58,0.25); color: #C4963A; }
+.c1-kw.muted { border-color: rgba(242,237,230,0.08); color: rgba(242,237,230,0.3); }
+.c1-type { font-family: 'Fraunces', serif; font-weight: 300; color: rgba(242,237,230,0.6); }
+
+/* bottom stats strip */
+.stats-strip {
+  display: flex;
+  border-top: 1px solid rgba(242,237,230,0.06);
+  padding-top: 32px;
+  gap: 32px;
+  margin-top: auto;
+}
+
+.stat-item .val {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 36px;
+  line-height: 1;
+  margin-bottom: 3px;
+}
+
+.stat-item .lbl {
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(242,237,230,0.25);
+}
+
+/* c1 accent bar */
+.c1-bar { height: 4px; background: linear-gradient(to right, #C4963A, #F5D680, #C4963A); max-width: 1200px; margin: 0 auto; }
+
+
+/* ══════════════════════════════
+   CONCEPT 2 — THE GRID
+   World: stark white, pure black, electric yellow
+   Vibe: bold automotive branding, Drive Auto reference, sport
+══════════════════════════════ */
+.c2 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 56px;
+}
+
+.c2-main {
+  background: #F0EDEA;
+  color: #0A0A0A;
+  position: relative;
+  overflow: hidden;
+}
+
+.c2-top {
+  background: #0A0A0A;
+  padding: 64px 64px 56px;
+  position: relative;
+  overflow: hidden;
+}
+
+.c2-top::after {
+  content: 'GRID';
+  position: absolute;
+  right: -10px; top: 50%;
+  transform: translateY(-50%);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 220px;
+  color: rgba(242,237,230,0.03);
+  line-height: 1;
+  pointer-events: none;
+  letter-spacing: -4px;
+}
+
+.c2-top-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.c2-badge { color: rgba(242,237,230,0.3); }
+.c2-badge .badge-num { border: 1px solid rgba(232,197,71,0.4); color: #E8C547; }
+
+.c2-wordmark {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(60px, 8vw, 110px);
+  line-height: 0.88;
+  letter-spacing: 2px;
+  color: #F2EDE6;
+  margin-bottom: 8px;
+}
+
+.c2-wordmark .dot { color: #E8C547; }
+
+.c2-sub {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  color: rgba(242,237,230,0.28);
+  margin-bottom: 44px;
+}
+
+.c2-tagline {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-style: italic;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.35;
+  color: rgba(242,237,230,0.82);
+  border-left: 3px solid #E8C547;
+  padding-left: 18px;
+}
+
+.c2-right-top {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.c2-stat-row {
+  display: flex;
+  gap: 24px;
+}
+
+.c2-stat-box {
+  flex: 1;
+  border: 1px solid rgba(242,237,230,0.08);
+  padding: 20px 18px;
+}
+
+.c2-stat-box .val {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 40px;
+  color: #E8C547;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.c2-stat-box .lbl {
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(242,237,230,0.25);
+}
+
+.c2-kw-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.c2-kw { border: 1px solid rgba(232,197,71,0.3); color: #E8C547; }
+.c2-kw.muted { border-color: rgba(242,237,230,0.08); color: rgba(242,237,230,0.3); }
+
+.c2-bottom {
+  padding: 48px 64px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+  background: #F0EDEA;
+  color: #0A0A0A;
+}
+
+.c2-bottom-block {}
+
+.c2-bottom-label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: rgba(10,10,10,0.3);
+  margin-bottom: 12px;
+}
+
+.c2-swatch-row { display: flex; gap: 6px; }
+.c2-sw { flex: 1; height: 36px; border-radius: 3px; }
+
+.c2-story-text {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(10,10,10,0.5);
+}
+.c2-story-text strong { color: #0A0A0A; font-weight: 400; }
+
+.c2-type-show { font-family: 'Bebas Neue', sans-serif; font-size: 28px; color: #0A0A0A; margin-bottom: 4px; }
+.c2-type-sub { font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: rgba(10,10,10,0.3); }
+
+.c2-bar { height: 6px; background: #E8C547; max-width: 1200px; margin: 0 auto; }
+
+
+/* ══════════════════════════════
+   CONCEPT 3 — APEX HEIR
+   World: slate charcoal, hot coral, cream
+   Vibe: premium sport, confidence, editorial punch
+══════════════════════════════ */
+.c3 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 56px;
+}
+
+.c3-main {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  min-height: 580px;
+}
+
+.c3-left {
+  background: #1E1A18;
+  padding: 72px 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.c3-badge { color: rgba(242,237,230,0.3); }
+.c3-badge .badge-num { border: 1px solid rgba(255,100,60,0.4); color: #FF6E3C; }
+
+.c3-wordmark {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(48px, 5.5vw, 72px);
+  line-height: 0.9;
+  letter-spacing: -2px;
+  color: #F2EDE6;
+  margin-bottom: 8px;
+}
+
+.c3-wordmark .heat { color: #FF6E3C; }
+
+.c3-sub {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+  color: rgba(242,237,230,0.28);
+  margin-bottom: 44px;
+}
+
+.c3-tagline {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 1.45;
+  color: rgba(242,237,230,0.8);
+  margin-bottom: 40px;
+}
+
+.c3-tagline em { color: #FF6E3C; font-style: normal; }
+
+.c3-story {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.75;
+  color: rgba(242,237,230,0.38);
+}
+.c3-story strong { color: rgba(242,237,230,0.7); font-weight: 400; }
+
+.c3-right {
+  background: #F7F2EC;
+  color: #1A1612;
+  padding: 72px 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.c3-right::before {
+  content: 'APEX';
+  position: absolute;
+  bottom: -30px; right: -10px;
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 200px;
+  color: rgba(26,22,18,0.04);
+  line-height: 1;
+  letter-spacing: -6px;
+  pointer-events: none;
+}
+
+.c3-pal-label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: rgba(26,22,18,0.28);
+  margin-bottom: 12px;
+}
+
+.c3-swatch-row { display: flex; gap: 6px; }
+.c3-sw { flex: 1; height: 38px; border-radius: 4px; }
+
+.c3-kw-wrap { display: flex; flex-wrap: wrap; gap: 7px; }
+.c3-kw { padding: 8px 13px; border-radius: 3px; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; }
+.c3-kw.hot { background: rgba(255,110,60,0.1); color: #FF6E3C; border: 1px solid rgba(255,110,60,0.25); }
+.c3-kw.muted { background: rgba(26,22,18,0.06); color: rgba(26,22,18,0.4); border: 1px solid transparent; }
+
+.c3-type { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 26px; color: rgba(26,22,18,0.6); margin-bottom: 4px; letter-spacing: -1px; }
+.c3-type-s { font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: rgba(26,22,18,0.25); }
+
+.c3-stat-row { display: flex; gap: 0; border-top: 1px solid rgba(26,22,18,0.08); padding-top: 28px; margin-top: auto; }
+.c3-stat { flex: 1; padding-right: 20px; border-right: 1px solid rgba(26,22,18,0.08); margin-right: 20px; }
+.c3-stat:last-child { border-right: none; margin-right: 0; }
+.c3-stat .val { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 34px; color: #FF6E3C; line-height: 1; margin-bottom: 3px; }
+.c3-stat .lbl { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: rgba(26,22,18,0.3); }
+
+.c3-bar { height: 4px; background: linear-gradient(to right, #FF6E3C, #FFB347); max-width: 1200px; margin: 0 auto; }
+
+
+/* ══════════════════════════════
+   CONCEPT 4 — CIRCUIT & CROWN
+   World: deep navy, champagne, ivory
+   Vibe: Monaco paddock, F1 club, exclusive members
+══════════════════════════════ */
+.c4 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 56px;
+}
+
+.c4-main {
+  background: #070D1A;
+  position: relative;
+  overflow: hidden;
+}
+
+/* grid pattern bg */
+.c4-main::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(212,180,90,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212,180,90,0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+}
+
+.c4-top {
+  padding: 72px 64px 60px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.c4-badge { color: rgba(212,180,90,0.5); }
+.c4-badge .badge-num { border: 1px solid rgba(212,180,90,0.4); color: #D4B45A; }
+
+.c4-wordmark {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: clamp(44px, 5.5vw, 72px);
+  line-height: 0.92;
+  color: #F2EDE6;
+  margin-bottom: 8px;
+}
+
+.c4-wordmark em { font-style: italic; color: #D4B45A; }
+
+.c4-sub {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+  color: rgba(242,237,230,0.25);
+  margin-bottom: 44px;
+}
+
+.c4-tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.45;
+  color: rgba(242,237,230,0.82);
+  margin-bottom: 36px;
+}
+
+.c4-tagline strong { color: #D4B45A; font-style: normal; font-weight: 400; }
+
+.c4-story {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.75;
+  color: rgba(242,237,230,0.35);
+}
+.c4-story strong { color: rgba(242,237,230,0.7); font-weight: 400; }
+
+.c4-right { display: flex; flex-direction: column; gap: 36px; }
+
+.c4-stat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: rgba(212,180,90,0.1);
+  border: 1px solid rgba(212,180,90,0.1);
+}
+
+.c4-stat-box {
+  background: #070D1A;
+  padding: 24px 22px;
+}
+
+.c4-stat-box .val {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 38px;
+  font-weight: 300;
+  color: #D4B45A;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.c4-stat-box .lbl {
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(242,237,230,0.2);
+}
+
+.c4-kw { display: flex; flex-wrap: wrap; gap: 7px; }
+.c4-tag { padding: 8px 14px; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; }
+.c4-tag.gold { border: 1px solid rgba(212,180,90,0.3); color: #D4B45A; }
+.c4-tag.muted { border: 1px solid rgba(242,237,230,0.08); color: rgba(242,237,230,0.28); }
+
+.c4-type { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 300; color: rgba(242,237,230,0.5); margin-bottom: 4px; }
+.c4-type-s { font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: rgba(242,237,230,0.18); }
+
+.c4-pal-row { display: flex; gap: 6px; }
+.c4-sw { flex: 1; height: 38px; border-radius: 4px; }
+
+.c4-bar { height: 4px; background: linear-gradient(to right, #D4B45A, #F5E098, #D4B45A); max-width: 1200px; margin: 0 auto; }
+
+/* bottom strip */
+.c4-bottom {
+  padding: 0 64px 64px;
+  position: relative;
+  z-index: 1;
+  border-top: 1px solid rgba(212,180,90,0.08);
+  margin-top: 0;
+  padding-top: 36px;
+}
+
+.c4-pal-label-b {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: rgba(242,237,230,0.2);
+  margin-bottom: 12px;
+}
+
+
+/* ══════════════════════════════
+   CONCEPT 5 — PODIUM HOUSE
+   World: ivory / racing green / brass
+   Vibe: British heritage, Goodwood, members-only estate
+══════════════════════════════ */
+.c5 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 56px;
+}
+
+.c5-main {
+  background: #EEE9DF;
+  color: #15201A;
+  position: relative;
+  overflow: hidden;
+}
+
+.c5-top {
+  background: #15201A;
+  padding: 72px 64px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.c5-top::after {
+  content: 'PODIUM';
+  position: absolute;
+  right: -10px; bottom: -20px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 200px;
+  color: rgba(242,237,230,0.03);
+  line-height: 1;
+  letter-spacing: -4px;
+  pointer-events: none;
+}
+
+.c5-badge { color: rgba(242,237,230,0.3); }
+.c5-badge .badge-num { border: 1px solid rgba(180,148,64,0.4); color: #B49440; }
+
+.c5-wordmark {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(48px, 5.5vw, 76px);
+  line-height: 0.93;
+  color: #F2EDE6;
+  margin-bottom: 8px;
+}
+
+.c5-wordmark em { font-style: italic; color: #B49440; }
+
+.c5-sub {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+  color: rgba(242,237,230,0.28);
+  margin-bottom: 44px;
+}
+
+.c5-tagline {
+  font-family: 'DM Serif Display', serif;
+  font-style: italic;
+  font-size: 22px;
+  line-height: 1.4;
+  color: rgba(242,237,230,0.82);
+  border-left: 3px solid #3D7A4A;
+  padding-left: 18px;
+  margin-bottom: 36px;
+}
+
+.c5-story {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.75;
+  color: rgba(242,237,230,0.38);
+}
+.c5-story strong { color: rgba(242,237,230,0.7); font-weight: 400; }
+
+.c5-right { display: flex; flex-direction: column; gap: 36px; z-index: 1; position: relative; }
+
+.c5-stat-row { display: flex; gap: 20px; }
+.c5-stat { flex: 1; border-left: 2px solid #3D7A4A; padding-left: 16px; }
+.c5-stat .val { font-family: 'DM Serif Display', serif; font-size: 38px; color: #B49440; line-height: 1; margin-bottom: 3px; }
+.c5-stat .lbl { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: rgba(242,237,230,0.25); }
+
+.c5-kw { display: flex; flex-wrap: wrap; gap: 7px; }
+.c5-tag { padding: 8px 14px; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; }
+.c5-tag.green { border: 1px solid rgba(61,122,74,0.45); color: #5AAA6A; }
+.c5-tag.muted { border: 1px solid rgba(242,237,230,0.1); color: rgba(242,237,230,0.28); }
+
+.c5-type { font-family: 'DM Serif Display', serif; font-size: 26px; color: rgba(242,237,230,0.5); margin-bottom: 4px; }
+.c5-type-s { font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: rgba(242,237,230,0.18); }
+
+.c5-bottom {
+  padding: 56px 64px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  background: #EEE9DF;
+  color: #15201A;
+}
+
+.c5-pal-label { font-size: 9px; font-weight: 700; letter-spacing: 5px; text-transform: uppercase; color: rgba(21,32,26,0.3); margin-bottom: 12px; }
+.c5-swatch-row { display: flex; gap: 6px; }
+.c5-sw { flex: 1; height: 36px; border-radius: 4px; }
+
+.c5-bottom-story { font-family: 'Barlow Condensed', sans-serif; font-weight: 300; font-size: 15px; line-height: 1.75; color: rgba(21,32,26,0.48); }
+.c5-bottom-story strong { color: #15201A; font-weight: 400; }
+
+.c5-bar { height: 4px; background: linear-gradient(to right, #3D7A4A, #7AC48A, #3D7A4A); max-width: 1200px; margin: 0 auto; }
+
+
+/* ══════════════════════════════
+   COMPARISON TABLE
+══════════════════════════════ */
+.compare-wrap {
+  max-width: 1200px;
+  margin: 80px auto 0;
+  padding: 0 56px 100px;
+}
+
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid rgba(242,237,230,0.06);
+}
+
+.compare-table th {
+  padding: 16px 20px;
+  text-align: left;
+  font-size: 9px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: rgba(242,237,230,0.2);
+  background: rgba(242,237,230,0.02);
+  border-bottom: 1px solid rgba(242,237,230,0.06);
+}
+
+.compare-table td {
+  padding: 14px 20px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(242,237,230,0.42);
+  border-bottom: 1px solid rgba(242,237,230,0.04);
+  vertical-align: top;
+  line-height: 1.5;
+}
+
+.compare-table tr:last-child td { border-bottom: none; }
+.compare-table td:first-child {
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(242,237,230,0.18);
+  width: 120px;
+}
+
+.tdname { font-size: 15px !important; color: #F2EDE6 !important; }
+.tdname-1 { font-family: 'Fraunces', serif !important; font-weight: 300 !important; }
+.tdname-2 { font-family: 'Bebas Neue', sans-serif !important; letter-spacing: 2px !important; }
+.tdname-3 { font-family: 'Syne', sans-serif !important; font-weight: 800 !important; letter-spacing: -1px !important; }
+.tdname-4 { font-family: 'Cormorant Garamond', serif !important; font-weight: 300 !important; }
+.tdname-5 { font-family: 'DM Serif Display', serif !important; }
+
+.td-dot {
+  display: inline-block;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  margin-right: 8px;
+  vertical-align: middle;
+  margin-top: -2px;
+}
+
+/* ── FOOTER ── */
+.footer {
+  border-top: 1px solid rgba(242,237,230,0.06);
+  padding: 40px 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-brand { font-family: 'Bebas Neue', sans-serif; font-size: 20px; color: rgba(242,237,230,0.18); letter-spacing: 2px; }
+.footer-sub { font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: rgba(242,237,230,0.1); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 800px) {
+  .c1-main, .c2-top-inner, .c3-main, .c4-top, .c5-top, .c5-bottom { grid-template-columns: 1fr; }
+  .c1, .c2, .c3, .c4, .c5, .compare-wrap, .divider { padding-left: 24px; padding-right: 24px; }
+  .c1-left, .c1-right, .c2-top, .c3-left, .c3-right, .c4-top, .c5-top, .c5-bottom { padding: 44px 28px; }
+  .c2-bottom { grid-template-columns: 1fr; padding: 36px 28px; }
+  .c4-bottom { padding: 32px 28px; }
+  .footer { flex-direction: column; gap: 12px; padding: 32px 24px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-bg-text">RACE</div>
+
+  <div class="hero-pill"><span></span> Brand Identity Concepts · Kids Luxury Racing Retreat</div>
+
+  <h1 class="hero-title">5 <span class="accent">Concepts.</span><br>1 Vision.</h1>
+
+  <p class="hero-sub">Each brand below is a complete world — name, tagline, palette, story, feel. Pick the one that makes you feel something.</p>
+
+  <div class="hero-concepts-row">
+    <div class="hero-chip">Aurelian Retreats</div>
+    <div class="hero-chip">The Grid</div>
+    <div class="hero-chip">Apex Heir</div>
+    <div class="hero-chip">Circuit &amp; Crown</div>
+    <div class="hero-chip">Podium House</div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════
+     CONCEPT 1 — AURELIAN RETREATS
+════════════════════════ -->
+<div class="divider">
+  <span class="divider-num">01 / 05</span>
+  <div class="divider-line"></div>
+  <span class="divider-name">Aurelian Retreats</span>
+</div>
+
+<div class="c1">
+  <div class="c1-main">
+    <div class="c1-left">
+      <div class="concept-badge c1-badge"><span class="badge-num">1</span> Concept A</div>
+      <div class="c1-wordmark"><em>Aurelian</em><br>Retreats</div>
+      <div class="c1-sub">Luxury Racing Residency</div>
+      <div class="c1-tagline">"Racing is the classroom.<br>The track is the world."</div>
+      <div class="c1-story">
+        There is a specific kind of family who finds us. Their child is <strong>exceptional</strong> and they already know it. This is not a summer camp. This is the first chapter of a standard they will hold themselves to forever.
+      </div>
+    </div>
+    <div class="c1-right">
+      <div>
+        <div class="panel-label">Colour Palette</div>
+        <div class="swatch-row">
+          <div class="sw" style="background:#F5EFE3; border:1px solid rgba(242,237,230,0.1)"></div>
+          <div class="sw" style="background:#C4963A"></div>
+          <div class="sw" style="background:#F5D680"></div>
+          <div class="sw" style="background:#5C3820"></div>
+          <div class="sw" style="background:#1A1208"></div>
+        </div>
+        <div class="sw-labels">
+          <div class="sw-label">Cream</div>
+          <div class="sw-label">Gold</div>
+          <div class="sw-label">Honey</div>
+          <div class="sw-label">Espresso</div>
+          <div class="sw-label">Black</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="panel-label">Brand Feel</div>
+        <div class="kw-wrap">
+          <div class="kw c1-kw">Heritage</div>
+          <div class="kw c1-kw">Prestige</div>
+          <div class="kw c1-kw muted">Timeless</div>
+          <div class="kw c1-kw muted">Refined</div>
+          <div class="kw c1-kw muted">Warm</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="panel-label">Typography</div>
+        <div class="type-block-name c1-type" style="font-family:'Fraunces',serif; font-weight:300">Fraunces</div>
+        <div class="type-block-sub">Barlow Condensed — Supporting</div>
+      </div>
+
+      <div class="stats-strip">
+        <div class="stat-item">
+          <div class="val" style="color:#C4963A">5★</div>
+          <div class="lbl">Resort Stay</div>
+        </div>
+        <div class="stat-item">
+          <div class="val" style="color:#C4963A">7</div>
+          <div class="lbl">Days Racing</div>
+        </div>
+        <div class="stat-item">
+          <div class="val" style="color:#C4963A">£15K</div>
+          <div class="lbl">Per Family</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="c1-bar"></div>
+
+
+<!-- ════════════════════════
+     CONCEPT 2 — THE GRID
+════════════════════════ -->
+<div class="divider">
+  <span class="divider-num">02 / 05</span>
+  <div class="divider-line"></div>
+  <span class="divider-name">The Grid</span>
+</div>
+
+<div class="c2">
+  <div class="c2-main">
+    <div class="c2-top">
+      <div class="c2-top-inner">
+        <div>
+          <div class="concept-badge c2-badge"><span class="badge-num">2</span> Concept B</div>
+          <div class="c2-wordmark">THE<br>GRID<span class="dot">.</span></div>
+          <div class="c2-sub">Race Week for the Next Generation</div>
+          <div class="c2-tagline">"For the ones born<br>to lead — and drive."</div>
+        </div>
+        <div class="c2-right-top">
+          <div class="c2-stat-row">
+            <div class="c2-stat-box">
+              <div class="val">5★</div>
+              <div class="lbl">Parent Resort</div>
+            </div>
+            <div class="c2-stat-box">
+              <div class="val">7</div>
+              <div class="lbl">Days on Circuit</div>
+            </div>
+            <div class="c2-stat-box">
+              <div class="val">£15K</div>
+              <div class="lbl">Per Family</div>
+            </div>
+          </div>
+          <div>
+            <div class="panel-label">Brand Feel</div>
+            <div class="c2-kw-row">
+              <div class="kw c2-kw">Bold</div>
+              <div class="kw c2-kw">Sharp</div>
+              <div class="kw c2-kw muted">Insider</div>
+              <div class="kw c2-kw muted">Modern</div>
+              <div class="kw c2-kw muted">Confident</div>
+            </div>
+          </div>
+          <div>
+            <div class="panel-label">Typography</div>
+            <div class="c2-type-show">Bebas Neue</div>
+            <div class="c2-type-sub">Barlow Condensed — Supporting</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="c2-bottom">
+      <div class="c2-bottom-block">
+        <div class="c2-bottom-label">Colour Palette</div>
+        <div class="c2-swatch-row">
+          <div class="c2-sw" style="background:#0A0A0A"></div>
+          <div class="c2-sw" style="background:#E8C547"></div>
+          <div class="c2-sw" style="background:#F0EDEA"></div>
+          <div class="c2-sw" style="background:#2A2420"></div>
+        </div>
+        <div style="display:flex;gap:6px;margin-top:5px">
+          <div style="flex:1;font-size:8px;letter-spacing:1px;color:rgba(10,10,10,0.35);text-align:center">Black</div>
+          <div style="flex:1;font-size:8px;letter-spacing:1px;color:rgba(10,10,10,0.35);text-align:center">Electric Yellow</div>
+          <div style="flex:1;font-size:8px;letter-spacing:1px;color:rgba(10,10,10,0.35);text-align:center">Off-White</div>
+          <div style="flex:1;font-size:8px;letter-spacing:1px;color:rgba(10,10,10,0.35);text-align:center">Carbon</div>
+        </div>
+      </div>
+      <div class="c2-bottom-block">
+        <div class="c2-bottom-label">Brand Story</div>
+        <div class="c2-story-text">The Grid is where serious racing begins. One week of real circuits, real instruction, real speed. While kids compete, parents rest. <strong>Both return different.</strong></div>
+      </div>
+      <div class="c2-bottom-block">
+        <div class="c2-bottom-label">Typography</div>
+        <div class="c2-type-show" style="font-size:22px">Bebas Neue</div>
+        <div class="c2-type-sub" style="margin-bottom:12px">Headlines</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:300;color:rgba(10,10,10,0.5);letter-spacing:1px">Barlow Condensed Light<br>For body + labels</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="c2-bar"></div>
+
+
+<!-- ════════════════════════
+     CONCEPT 3 — APEX HEIR
+════════════════════════ -->
+<div class="divider">
+  <span class="divider-num">03 / 05</span>
+  <div class="divider-line"></div>
+  <span class="divider-name">Apex Heir</span>
+</div>
+
+<div class="c3">
+  <div class="c3-main">
+    <div class="c3-left">
+      <div>
+        <div class="concept-badge c3-badge"><span class="badge-num">3</span> Concept C</div>
+        <div class="c3-wordmark">APEX<br><span class="heat">HEIR</span></div>
+        <div class="c3-sub">Junior Racing Academy</div>
+        <div class="c3-tagline">"Speed is learned.<br><em>Greatness is inherited.</em>"</div>
+        <div class="c3-story">
+          <strong>Apex Heir</strong> was built for children who are already different. An immersive week of professional racing, elite facilities, and a culture of excellence that follows them home.
+        </div>
+      </div>
+      <div class="stats-strip" style="border-color:rgba(242,237,230,0.08)">
+        <div class="stat-item">
+          <div class="val" style="color:#FF6E3C">5★</div>
+          <div class="lbl">Resort Stay</div>
+        </div>
+        <div class="stat-item">
+          <div class="val" style="color:#FF6E3C">7</div>
+          <div class="lbl">Days Racing</div>
+        </div>
+        <div class="stat-item">
+          <div class="val" style="color:#FF6E3C">£15K</div>
+          <div class="lbl">Per Family</div>
+        </div>
+      </div>
+    </div>
+    <div class="c3-right">
+      <div>
+        <div class="c3-pal-label">Colour Palette</div>
+        <div class="c3-swatch-row">
+          <div class="c3-sw" style="background:#1E1A18"></div>
+          <div class="c3-sw" style="background:#FF6E3C"></div>
+          <div class="c3-sw" style="background:#FFB347"></div>
+          <div class="c3-sw" style="background:#F7F2EC"></div>
+        </div>
+        <div style="display:flex;gap:6px;margin-top:5px">
+          <div style="flex:1;font-size:8px;letter-spacing:1px;color:rgba(26,22,18,0.35);text-align:center">Dark</div>
+          <div style="flex:1;font-size:8px;letter-spacing:1px;color:rgba(26,22,18,0.35);text-align:center">Hot Coral</div>
+          <div style="flex:1;font-size:8px;letter-spacing:1px;color:rgba(26,22,18,0.35);text-align:center">Amber</div>
+          <div style="flex:1;font-size:8px;letter-spacing:1px;color:rgba(26,22,18,0.35);text-align:center">Cream</div>
+        </div>
+      </div>
+      <div>
+        <div class="c3-pal-label">Brand Feel</div>
+        <div class="c3-kw-wrap">
+          <div class="c3-kw hot">Ambition</div>
+          <div class="c3-kw hot">Intensity</div>
+          <div class="c3-kw muted">Champion</div>
+          <div class="c3-kw muted">Grit</div>
+          <div class="c3-kw muted">Bold</div>
+        </div>
+      </div>
+      <div>
+        <div class="c3-pal-label">Typography</div>
+        <div class="c3-type">Syne</div>
+        <div class="c3-type-s">Barlow Condensed — Supporting</div>
+      </div>
+      <div class="c3-stat-row">
+        <div class="c3-stat">
+          <div class="val">High</div>
+          <div class="lbl">Energy</div>
+        </div>
+        <div class="c3-stat">
+          <div class="val">Sport</div>
+          <div class="lbl">Luxury</div>
+        </div>
+        <div class="c3-stat">
+          <div class="val">Bold</div>
+          <div class="lbl">Palette</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="c3-bar"></div>
+
+
+<!-- ════════════════════════
+     CONCEPT 4 — CIRCUIT & CROWN
+════════════════════════ -->
+<div class="divider">
+  <span class="divider-num">04 / 05</span>
+  <div class="divider-line"></div>
+  <span class="divider-name">Circuit &amp; Crown</span>
+</div>
+
+<div class="c4">
+  <div class="c4-main">
+    <div class="c4-top">
+      <div>
+        <div class="concept-badge c4-badge"><span class="badge-num">4</span> Concept D</div>
+        <div class="c4-wordmark">Circuit<br>&amp; <em>Crown</em></div>
+        <div class="c4-sub">Racing Retreats for Rising Champions</div>
+        <div class="c4-tagline">"The fastest way to learn<br><strong>who you are.</strong>"</div>
+        <div class="c4-story">
+          The Grand Prix paddock has its own language. Entry is not bought — it is earned. <strong>Circuit &amp; Crown</strong> brings that world to the next generation. A week of professional racing and the quiet confidence that only comes from doing something hard, well.
+        </div>
+      </div>
+      <div class="c4-right">
+        <div>
+          <div class="panel-label" style="color:rgba(242,237,230,0.2)">Colour Palette</div>
+          <div class="c4-pal-row">
+            <div class="c4-sw" style="background:#070D1A"></div>
+            <div class="c4-sw" style="background:#D4B45A"></div>
+            <div class="c4-sw" style="background:#1E3054"></div>
+            <div class="c4-sw" style="background:#F0EBE2"></div>
+          </div>
+          <div style="display:flex;gap:6px;margin-top:5px">
+            <div style="flex:1;font-size:8px;letter-spacing:1px;color:rgba(242,237,230,0.18);text-align:center">Navy</div>
+            <div style="flex:1;font-size:8px;letter-spacing:1px;color:rgba(242,237,230,0.18);text-align:center">Champagne</div>
+            <div style="flex:1;font-size:8px;letter-spacing:1px;color:rgba(242,237,230,0.18);text-align:center">Slate</div>
+            <div style="flex:1;font-size:8px;letter-spacing:1px;color:rgba(242,237,230,0.18);text-align:center">Linen</div>
+          </div>
+        </div>
+        <div class="c4-stat-grid">
+          <div class="c4-stat-box">
+            <div class="val">7</div>
+            <div class="lbl">Day Programme</div>
+          </div>
+          <div class="c4-stat-box">
+            <div class="val">5★</div>
+            <div class="lbl">Parent Resort</div>
+          </div>
+          <div class="c4-stat-box">
+            <div class="val">Pro</div>
+            <div class="lbl">Instructors</div>
+          </div>
+          <div class="c4-stat-box">
+            <div class="val">Ltd</div>
+            <div class="lbl">Places Only</div>
+          </div>
+        </div>
+        <div>
+          <div class="panel-label" style="color:rgba(242,237,230,0.2)">Brand Feel</div>
+          <div class="c4-kw">
+            <div class="c4-tag gold">Monaco</div>
+            <div class="c4-tag gold">Paddock</div>
+            <div class="c4-tag muted">Elite Club</div>
+            <div class="c4-tag muted">Prestige</div>
+          </div>
+        </div>
+        <div>
+          <div class="panel-label" style="color:rgba(242,237,230,0.2)">Typography</div>
+          <div class="c4-type">Cormorant Garamond</div>
+          <div class="c4-type-s">Barlow Condensed — Supporting</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="c4-bar"></div>
+
+
+<!-- ════════════════════════
+     CONCEPT 5 — PODIUM HOUSE
+════════════════════════ -->
+<div class="divider">
+  <span class="divider-num">05 / 05</span>
+  <div class="divider-line"></div>
+  <span class="divider-name">Podium House</span>
+</div>
+
+<div class="c5">
+  <div class="c5-main">
+    <div class="c5-top">
+      <div>
+        <div class="concept-badge c5-badge"><span class="badge-num">5</span> Concept E</div>
+        <div class="c5-wordmark">Podium<br><em>House</em></div>
+        <div class="c5-sub">Elite Racing Academy</div>
+        <div class="c5-tagline">"For the ones born to lead — and drive."</div>
+        <div class="c5-story">
+          Some children are built differently. More restless. Harder to contain in a classroom. <strong>Podium House</strong> is built for them — a week-long racing immersion where ambition finally has a home.
+        </div>
+      </div>
+      <div class="c5-right">
+        <div>
+          <div class="panel-label" style="color:rgba(242,237,230,0.2)">Brand Feel</div>
+          <div class="c5-kw">
+            <div class="c5-tag green">British</div>
+            <div class="c5-tag green">Heritage</div>
+            <div class="c5-tag muted">Goodwood</div>
+            <div class="c5-tag muted">Champion</div>
+            <div class="c5-tag muted">Earned</div>
+          </div>
+        </div>
+        <div class="c5-stat-row">
+          <div class="c5-stat">
+            <div class="val">5★</div>
+            <div class="lbl">Resort Stay</div>
+          </div>
+          <div class="c5-stat">
+            <div class="val">7</div>
+            <div class="lbl">Days Racing</div>
+          </div>
+          <div class="c5-stat">
+            <div class="val">£15K</div>
+            <div class="lbl">Per Family</div>
+          </div>
+        </div>
+        <div>
+          <div class="panel-label" style="color:rgba(242,237,230,0.2)">Typography</div>
+          <div class="c5-type">DM Serif Display</div>
+          <div class="c5-type-s">Barlow Condensed — Supporting</div>
+        </div>
+      </div>
+    </div>
+    <div class="c5-bottom">
+      <div>
+        <div class="c5-pal-label">Colour Palette</div>
+        <div class="c5-swatch-row">
+          <div class="c5-sw" style="background:#15201A"></div>
+          <div class="c5-sw" style="background:#3D7A4A"></div>
+          <div class="c5-sw" style="background:#B49440"></div>
+          <div class="c5-sw" style="background:#EEE9DF"></div>
+        </div>
+        <div style="display:flex;gap:6px;margin-top:5px">
+          <div style="flex:1;font-size:8px;letter-spacing:1px;color:rgba(21,32,26,0.4);text-align:center">Forest</div>
+          <div style="flex:1;font-size:8px;letter-spacing:1px;color:rgba(21,32,26,0.4);text-align:center">Racing Green</div>
+          <div style="flex:1;font-size:8px;letter-spacing:1px;color:rgba(21,32,26,0.4);text-align:center">Brass</div>
+          <div style="flex:1;font-size:8px;letter-spacing:1px;color:rgba(21,32,26,0.4);text-align:center">Ivory</div>
+        </div>
+      </div>
+      <div>
+        <div class="c5-pal-label">The Story</div>
+        <div class="c5-bottom-story">Where British motorsport heritage meets five-star luxury. The podium is not where it ends — it is where everything begins. <strong>Podium House.</strong></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="c5-bar"></div>
+
+
+<!-- ── COMPARISON ── -->
+<div class="compare-wrap">
+  <div class="divider" style="padding-left:0;padding-right:0;padding-top:20px">
+    <span class="divider-num">Summary</span>
+    <div class="divider-line"></div>
+    <span class="divider-name">At a Glance</span>
+  </div>
+
+  <table class="compare-table">
+    <thead>
+      <tr>
+        <th></th>
+        <th>01 Aurelian</th>
+        <th>02 The Grid</th>
+        <th>03 Apex Heir</th>
+        <th>04 Circuit &amp; Crown</th>
+        <th>05 Podium House</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Name</td>
+        <td class="tdname tdname-1"><span class="td-dot" style="background:#C4963A"></span>Aurelian Retreats</td>
+        <td class="tdname tdname-2"><span class="td-dot" style="background:#E8C547"></span>THE GRID.</td>
+        <td class="tdname tdname-3"><span class="td-dot" style="background:#FF6E3C"></span>Apex Heir</td>
+        <td class="tdname tdname-4"><span class="td-dot" style="background:#D4B45A"></span>Circuit &amp; Crown</td>
+        <td class="tdname tdname-5"><span class="td-dot" style="background:#3D7A4A"></span>Podium House</td>
+      </tr>
+      <tr>
+        <td>Tagline</td>
+        <td>"Racing is the classroom."</td>
+        <td>"Born to lead — and drive."</td>
+        <td>"Speed is learned."</td>
+        <td>"Fastest way to learn who you are."</td>
+        <td>"Born to lead — and drive."</td>
+      </tr>
+      <tr>
+        <td>Palette</td>
+        <td>Cream, gold, espresso</td>
+        <td>Black, yellow, off-white</td>
+        <td>Dark, coral, amber, cream</td>
+        <td>Navy, champagne, slate</td>
+        <td>Forest, green, brass, ivory</td>
+      </tr>
+      <tr>
+        <td>Energy</td>
+        <td>Warm editorial luxury</td>
+        <td>Bold, sport, modern</td>
+        <td>Hot, ambitious, charged</td>
+        <td>Monaco, club, elite</td>
+        <td>Heritage, British, earned</td>
+      </tr>
+      <tr>
+        <td>Parent</td>
+        <td>Taste-led, understated</td>
+        <td>Status-driven, modern</td>
+        <td>Ambitious, competitive</td>
+        <td>Global, F1 fan, traveller</td>
+        <td>Old money, legacy-minded</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="footer-brand">Racing Retreat · 5 Brand Concepts</div>
+  <div class="footer-sub">Prepared by Güneş · 2026 · Confidential</div>
+</footer>
+
+</body>
+</html>
